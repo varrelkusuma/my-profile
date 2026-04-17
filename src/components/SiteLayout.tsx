@@ -1,5 +1,6 @@
-import { Link, Outlet } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { MapPin, Mail, Twitter, Linkedin, GraduationCap } from "lucide-react";
+import type { ReactNode } from "react";
 
 const navItems = [
   { to: "/", label: "Homepage" },
@@ -10,7 +11,7 @@ const navItems = [
   { to: "/people", label: "People" },
 ] as const;
 
-export function SiteLayout() {
+export function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-background">
       {/* Top Nav */}
@@ -67,9 +68,7 @@ export function SiteLayout() {
           </div>
         </aside>
 
-        <main className="min-w-0">
-          <Outlet />
-        </main>
+        <main className="min-w-0">{children}</main>
       </div>
 
       <footer className="max-w-6xl mx-auto px-6 py-10 mt-10 border-t border-border text-xs text-muted-foreground text-center">
