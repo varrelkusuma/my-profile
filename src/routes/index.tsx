@@ -1,18 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import { Flame } from "lucide-react";
+import { FolderGit2 } from "lucide-react";
+import { ProjectCard, projects } from "./projects";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
 });
-
-const news = [
-  "Welcome message — replace these news items with your own latest updates and announcements.",
-  "Paper accepted at [Conference Name] — congratulations to all collaborators.",
-  "Invited talk at [Venue] on [Topic]. Slides available upon request.",
-  "Our project [Project Name] received the [Award Name].",
-  "Serving as Area Chair for [Conference Year].",
-];
 
 function HomePage() {
   return (
@@ -23,6 +16,7 @@ function HomePage() {
 }
 
 function Home() {
+  const featured = projects.slice(0, 2);
   return (
     <article className="space-y-10">
       <section className="space-y-4 text-[15px] leading-7">
@@ -45,15 +39,20 @@ function Home() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-serif font-semibold flex items-center gap-2 mb-4 pb-2 border-b border-border">
-          <Flame className="w-6 h-6 text-orange-500" />
-          News
-        </h2>
-        <ul className="space-y-2 list-disc pl-5 marker:text-muted-foreground">
-          {news.map((item, i) => (
-            <li key={i} className="leading-7">{item}</li>
+        <div className="flex items-center justify-between mb-4 pb-2 border-b border-border">
+          <h2 className="text-2xl font-serif font-semibold flex items-center gap-2">
+            <FolderGit2 className="w-6 h-6 text-primary" />
+            Projects
+          </h2>
+          <Link to="/projects" className="text-sm no-underline hover:underline">
+            View all →
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {featured.map((p) => (
+            <ProjectCard key={p.title} project={p} />
           ))}
-        </ul>
+        </div>
       </section>
     </article>
   );

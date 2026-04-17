@@ -10,8 +10,8 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PublicationsRouteImport } from './routes/publications'
+import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as PeopleRouteImport } from './routes/people'
-import { Route as NewsRouteImport } from './routes/news'
 import { Route as HonorsRouteImport } from './routes/honors'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -21,14 +21,14 @@ const PublicationsRoute = PublicationsRouteImport.update({
   path: '/publications',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PeopleRoute = PeopleRouteImport.update({
   id: '/people',
   path: '/people',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const NewsRoute = NewsRouteImport.update({
-  id: '/news',
-  path: '/news',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HonorsRoute = HonorsRouteImport.update({
@@ -51,16 +51,16 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/honors': typeof HonorsRoute
-  '/news': typeof NewsRoute
   '/people': typeof PeopleRoute
+  '/projects': typeof ProjectsRoute
   '/publications': typeof PublicationsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/honors': typeof HonorsRoute
-  '/news': typeof NewsRoute
   '/people': typeof PeopleRoute
+  '/projects': typeof ProjectsRoute
   '/publications': typeof PublicationsRoute
 }
 export interface FileRoutesById {
@@ -68,22 +68,28 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/honors': typeof HonorsRoute
-  '/news': typeof NewsRoute
   '/people': typeof PeopleRoute
+  '/projects': typeof ProjectsRoute
   '/publications': typeof PublicationsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/honors' | '/news' | '/people' | '/publications'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/honors'
+    | '/people'
+    | '/projects'
+    | '/publications'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/honors' | '/news' | '/people' | '/publications'
+  to: '/' | '/about' | '/honors' | '/people' | '/projects' | '/publications'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/honors'
-    | '/news'
     | '/people'
+    | '/projects'
     | '/publications'
   fileRoutesById: FileRoutesById
 }
@@ -91,8 +97,8 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   HonorsRoute: typeof HonorsRoute
-  NewsRoute: typeof NewsRoute
   PeopleRoute: typeof PeopleRoute
+  ProjectsRoute: typeof ProjectsRoute
   PublicationsRoute: typeof PublicationsRoute
 }
 
@@ -105,18 +111,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PublicationsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/people': {
       id: '/people'
       path: '/people'
       fullPath: '/people'
       preLoaderRoute: typeof PeopleRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/news': {
-      id: '/news'
-      path: '/news'
-      fullPath: '/news'
-      preLoaderRoute: typeof NewsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/honors': {
@@ -147,8 +153,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   HonorsRoute: HonorsRoute,
-  NewsRoute: NewsRoute,
   PeopleRoute: PeopleRoute,
+  ProjectsRoute: ProjectsRoute,
   PublicationsRoute: PublicationsRoute,
 }
 export const routeTree = rootRouteImport
