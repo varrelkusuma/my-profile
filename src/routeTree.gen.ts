@@ -11,7 +11,6 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PublicationsRouteImport } from './routes/publications'
 import { Route as ProjectsRouteImport } from './routes/projects'
-import { Route as PeopleRouteImport } from './routes/people'
 import { Route as HonorsRouteImport } from './routes/honors'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -24,11 +23,6 @@ const PublicationsRoute = PublicationsRouteImport.update({
 const ProjectsRoute = ProjectsRouteImport.update({
   id: '/projects',
   path: '/projects',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PeopleRoute = PeopleRouteImport.update({
-  id: '/people',
-  path: '/people',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HonorsRoute = HonorsRouteImport.update({
@@ -51,7 +45,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/honors': typeof HonorsRoute
-  '/people': typeof PeopleRoute
   '/projects': typeof ProjectsRoute
   '/publications': typeof PublicationsRoute
 }
@@ -59,7 +52,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/honors': typeof HonorsRoute
-  '/people': typeof PeopleRoute
   '/projects': typeof ProjectsRoute
   '/publications': typeof PublicationsRoute
 }
@@ -68,36 +60,21 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/honors': typeof HonorsRoute
-  '/people': typeof PeopleRoute
   '/projects': typeof ProjectsRoute
   '/publications': typeof PublicationsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/about'
-    | '/honors'
-    | '/people'
-    | '/projects'
-    | '/publications'
+  fullPaths: '/' | '/about' | '/honors' | '/projects' | '/publications'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/honors' | '/people' | '/projects' | '/publications'
-  id:
-    | '__root__'
-    | '/'
-    | '/about'
-    | '/honors'
-    | '/people'
-    | '/projects'
-    | '/publications'
+  to: '/' | '/about' | '/honors' | '/projects' | '/publications'
+  id: '__root__' | '/' | '/about' | '/honors' | '/projects' | '/publications'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   HonorsRoute: typeof HonorsRoute
-  PeopleRoute: typeof PeopleRoute
   ProjectsRoute: typeof ProjectsRoute
   PublicationsRoute: typeof PublicationsRoute
 }
@@ -116,13 +93,6 @@ declare module '@tanstack/react-router' {
       path: '/projects'
       fullPath: '/projects'
       preLoaderRoute: typeof ProjectsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/people': {
-      id: '/people'
-      path: '/people'
-      fullPath: '/people'
-      preLoaderRoute: typeof PeopleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/honors': {
@@ -153,19 +123,9 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   HonorsRoute: HonorsRoute,
-  PeopleRoute: PeopleRoute,
   ProjectsRoute: ProjectsRoute,
   PublicationsRoute: PublicationsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}

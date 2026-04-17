@@ -9,7 +9,6 @@ const navItems = [
   { to: "/projects", label: "Projects" },
   { to: "/publications", label: "Publications" },
   { to: "/honors", label: "Honors and Awards" },
-  { to: "/people", label: "People" },
 ] as const;
 
 export function SiteLayout({ children }: { children: ReactNode }) {
