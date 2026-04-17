@@ -51,16 +51,13 @@ export function ProjectCard({ project }: { project: Project }) {
   const Icon = project.icon;
   return (
     <article className="group rounded-lg border border-border bg-card overflow-hidden flex flex-col transition-shadow hover:shadow-md">
-      <div className="aspect-[16/9] bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center border-b border-border">
-        <Icon
-          className="w-16 h-16 text-primary transition-transform duration-300 group-hover:scale-110"
-          strokeWidth={1.5}
-        />
-      </div>
       <div className="p-5 flex flex-col gap-3 flex-1">
-        <span className="self-start inline-flex items-center rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-medium">
-          {project.category}
-        </span>
+        <div className="flex items-center gap-2">
+          <Icon className="w-4 h-4 text-primary shrink-0" strokeWidth={2} />
+          <span className="inline-flex items-center rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-medium">
+            {project.category}
+          </span>
+        </div>
         <h3 className="text-lg font-serif font-semibold leading-snug">{project.title}</h3>
         <p className="text-sm text-muted-foreground leading-6 flex-1">{project.description}</p>
         {project.github && (
