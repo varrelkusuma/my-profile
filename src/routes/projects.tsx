@@ -30,20 +30,20 @@ export type Project = {
 // Browse icons at https://lucide.dev/icons and import them above.
 export const projects: Project[] = [
   {
-    title: "Project One",
+    title: "AphaVoice",
     description:
-      "Short description of what the project does, the techniques used, and the impact or results achieved.",
+      "Text-to-speech and automatic speech recognition (ASR) for aphasia patients",
     icon: AudioLines,
     category: "Speech AI",
-    github: "https://github.com/your-username/project-one",
+    github: "https://github.com/varrelkusuma/MedEmoji-TTS",
   },
   {
-    title: "Project Two",
+    title: "Transparent CXR",
     description:
-      "A brief overview of the project goals, dataset, models, and notable findings or contributions.",
+      "Generalizable and interpretable deep learning for chest X-ray analysis",
     icon: ScanHeart,
-    category: "Medical Imaging",
-    github: "https://github.com/your-username/project-two",
+    category: "Vision AI",
+    github: "https://github.com/varrelkusuma/Reliable-CXR-AI-Pipeline",
   },
 ];
 
