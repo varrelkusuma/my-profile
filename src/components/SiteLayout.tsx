@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 const navItems = [
   { to: "/", label: "Homepage" },
   { to: "/about", label: "About Me" },
-  { to: "/news", label: "News" },
+  { to: "/projects", label: "Projects" },
   { to: "/publications", label: "Publications" },
   { to: "/honors", label: "Honors and Awards" },
   { to: "/people", label: "People" },
