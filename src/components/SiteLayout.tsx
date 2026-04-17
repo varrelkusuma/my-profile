@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { MapPin, Mail, Twitter, Linkedin, GraduationCap } from "lucide-react";
 import type { ReactNode } from "react";
+import profilePic from '../assets/profile.jpg';
 
 const navItems = [
   { to: "/", label: "Homepage" },
@@ -37,7 +38,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="w-44 h-44 rounded-full bg-muted overflow-hidden border-4 border-background shadow-md mb-5 flex items-center justify-center">
               <img 
-                src="src\assets\profile.jpg" 
+                src={profilePic} 
                 alt="Profile photo"
                 className="w-full h-full object-cover" 
               />
