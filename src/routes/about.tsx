@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
+import { GraduationCap, Briefcase } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -38,17 +39,26 @@ function About() {
       <section>
         <h2 className="text-2xl font-serif font-semibold mb-4 pb-2 border-b border-border">Education</h2>
         <ul className="space-y-3">
-          <li>
-            <div className="font-semibold">Ph.D. in [Field]</div>
-            <div className="text-sm text-muted-foreground">[University Name], [Year]</div>
+          <li className="flex items-start gap-3">
+            <GraduationCap className="w-5 h-5 text-muted-foreground shrink-0 mt-1" strokeWidth={1.75} />
+            <div className="flex-1">
+              <div className="font-semibold">Ph.D. in [Field]</div>
+              <div className="text-sm text-muted-foreground">[University Name], [Year]</div>
+            </div>
           </li>
-          <li>
-            <div className="font-semibold">M.Sc. in [Field]</div>
-            <div className="text-sm text-muted-foreground">[University Name], [Year]</div>
+          <li className="flex items-start gap-3">
+            <GraduationCap className="w-5 h-5 text-muted-foreground shrink-0 mt-1" strokeWidth={1.75} />
+            <div className="flex-1">
+              <div className="font-semibold">M.Sc. in [Field]</div>
+              <div className="text-sm text-muted-foreground">[University Name], [Year]</div>
+            </div>
           </li>
-          <li>
-            <div className="font-semibold">B.Sc. in [Field]</div>
-            <div className="text-sm text-muted-foreground">[University Name], [Year]</div>
+          <li className="flex items-start gap-3">
+            <GraduationCap className="w-5 h-5 text-muted-foreground shrink-0 mt-1" strokeWidth={1.75} />
+            <div className="flex-1">
+              <div className="font-semibold">B.Sc. in [Field]</div>
+              <div className="text-sm text-muted-foreground">[University Name], [Year]</div>
+            </div>
           </li>
         </ul>
       </section>
@@ -56,13 +66,19 @@ function About() {
       <section>
         <h2 className="text-2xl font-serif font-semibold mb-4 pb-2 border-b border-border">Experience</h2>
         <ul className="space-y-3">
-          <li>
-            <div className="font-semibold">[Current Title]</div>
-            <div className="text-sm text-muted-foreground">[Institution] · [Year]–Present</div>
+          <li className="flex items-start gap-3">
+            <Briefcase className="w-5 h-5 text-muted-foreground shrink-0 mt-1" strokeWidth={1.75} />
+            <div className="flex-1">
+              <div className="font-semibold">[Current Title]</div>
+              <div className="text-sm text-muted-foreground">[Institution] · [Year]–Present</div>
+            </div>
           </li>
-          <li>
-            <div className="font-semibold">[Previous Title]</div>
-            <div className="text-sm text-muted-foreground">[Institution] · [Year]–[Year]</div>
+          <li className="flex items-start gap-3">
+            <Briefcase className="w-5 h-5 text-muted-foreground shrink-0 mt-1" strokeWidth={1.75} />
+            <div className="flex-1">
+              <div className="font-semibold">[Previous Title]</div>
+              <div className="text-sm text-muted-foreground">[Institution] · [Year]–[Year]</div>
+            </div>
           </li>
         </ul>
       </section>
