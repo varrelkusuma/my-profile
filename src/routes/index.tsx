@@ -21,20 +21,12 @@ function Home() {
     <article className="space-y-10">
       <section className="space-y-4 text-[15px] leading-7">
         <p>
-          I am a [Your Title] at [Your Institution]. Previously, I was a [Previous Role]
-          at [Previous Institution] and worked with [Group / Lab Name]. I am also affiliated
-          with [Affiliation], where I [brief description of role since YEAR].
+          I am a research postgraduate student at Imperial College London. Previously, I worked as Product Manager
+          at several companies (MIFX, Bonza, Pomona) and founded a startup Allure AI (acquired by IDX:TLKM).
         </p>
         <p>
-          My research focuses on [primary research area], [secondary area], and
-          [tertiary area]. These topics aim to advance [broader goal] and have
-          applications in [application 1], [application 2], and [application 3].
-        </p>
-        <p>
-          <strong>Positions Available!</strong> I am looking for motivated candidates
-          for [PhD / PostDoc / RA] positions. Strong background in [requirement 1],
-          [requirement 2], and prior publications in [venues] are preferred. Please
-          email your CV and a short research statement.
+          My research focuses on Speech/Audio AI, Computer Vision, and
+          Multimodal Large Language Models (MLLMs). My main area of research is in healthcare applications.
         </p>
       </section>
 

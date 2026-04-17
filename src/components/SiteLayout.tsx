@@ -36,29 +36,28 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         <aside className="md:sticky md:top-24 md:self-start">
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="w-44 h-44 rounded-full bg-muted overflow-hidden border-4 border-background shadow-md mb-5 flex items-center justify-center">
-              {/* Replace with your photo */}
-              <span className="text-5xl font-serif text-muted-foreground">YN</span>
+              <img 
+                src="public\profile.jpg" 
+                alt="Profile photo" 
+                className="w-full h-full object-cover" 
+              />
             </div>
-            <h1 className="text-2xl font-serif font-semibold mb-2">Your Name</h1>
+            <h1 className="text-2xl font-serif font-semibold mb-2">Al Varrel Putra Kusuma</h1>
             <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
-              Your short tagline describing your role and research interests goes here.
+              Research Postgraduate at Imperial College London.
             </p>
             <ul className="space-y-2 text-sm w-full">
               <li className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4 shrink-0" />
-                <span>City, Country</span>
+                <span>London, United Kingdom</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 shrink-0 text-muted-foreground" />
-                <a href="mailto:you@example.com">Email</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Twitter className="w-4 h-4 shrink-0 text-muted-foreground" />
-                <a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a>
+                <a href="mailto:al-varrel.kusuma25@imperial.ac.uk">Email</a>
               </li>
               <li className="flex items-center gap-2">
                 <Linkedin className="w-4 h-4 shrink-0 text-muted-foreground" />
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+                <a href="https://linkedin.com/in/varrelkusuma/" target="_blank" rel="noreferrer">LinkedIn</a>
               </li>
               <li className="flex items-center gap-2">
                 <GraduationCap className="w-4 h-4 shrink-0 text-muted-foreground" />
