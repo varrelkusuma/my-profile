@@ -36,6 +36,10 @@ export const Route = createRootRoute({
       { property: "og:description", content: "Personal academic homepage with bio, news, publications, honors, and team." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Your Name — Personal Academic Page" },
+      { name: "twitter:description", content: "Personal academic homepage with bio, news, publications, honors, and team." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0d159022-19cb-43cf-bc2e-d9f102785193/id-preview-7f12665d--77cf4220-0ec7-423e-b8fc-1bcddeb2115e.lovable.app-1776464823740.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0d159022-19cb-43cf-bc2e-d9f102785193/id-preview-7f12665d--77cf4220-0ec7-423e-b8fc-1bcddeb2115e.lovable.app-1776464823740.png" },
     ],
     links: [
       {
