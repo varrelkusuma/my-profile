@@ -29,17 +29,13 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Al Varrel Putra Kusuma - Digital Portfolio" },
-      { name: "description", content: "Personal academic homepage for Al Varrel Putra Kusuma." },
+      { title: "Your Name — Personal Academic Page" },
+      { name: "description", content: "Personal academic homepage with bio, news, publications, honors, and team." },
       { name: "author", content: "Your Name" },
-      { property: "og:title", content: "Al Varrel Putra Kusuma - Digital Portfolio" },
-      { property: "og:description", content: "Personal academic homepage for Al Varrel Putra Kusuma." },
+      { property: "og:title", content: "Your Name — Personal Academic Page" },
+      { property: "og:description", content: "Personal academic homepage with bio, news, publications, honors, and team." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Al Varrel Putra Kusuma - Digital Portfolio" },
-      { name: "twitter:description", content: "Personal academic homepage for Al Varrel Putra Kusuma." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8ac08ef7-480a-4d1e-9a5c-62e4d3f414ba/id-preview-ee069910--77cf4220-0ec7-423e-b8fc-1bcddeb2115e.lovable.app-1776456574614.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8ac08ef7-480a-4d1e-9a5c-62e4d3f414ba/id-preview-ee069910--77cf4220-0ec7-423e-b8fc-1bcddeb2115e.lovable.app-1776456574614.png" },
     ],
     links: [
       {
