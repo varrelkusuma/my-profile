@@ -31,7 +31,7 @@ export const Route = createRootRoute({
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Al Varrel Putra Kusuma — Personal Portfolio" },
       { name: "description", content: "Personal digital portfolio to showcase publications, projects, and awards." },
-      { name: "author", content: "Your Name" },
+      { name: "author", content: "Al Varrel Putra Kusuma" },
       { property: "og:title", content: "Al Varrel Putra Kusuma — Personal Portfolio" },
       { property: "og:description", content: "Personal digital portfolio to showcase publications, projects, and awards." },
       { property: "og:type", content: "website" },

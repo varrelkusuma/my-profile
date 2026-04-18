@@ -5,9 +5,9 @@ import { Github, AudioLines, ScanHeart, type LucideIcon } from "lucide-react";
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
-      { title: "Projects — Your Name" },
+      { title: "Projects — Al Varrel Putra Kusuma" },
       { name: "description", content: "Selected research and engineering projects." },
-      { property: "og:title", content: "Projects — Your Name" },
+      { property: "og:title", content: "Projects — Al Varrel Putra Kusuma" },
       { property: "og:description", content: "Selected research and engineering projects." },
     ],
   }),

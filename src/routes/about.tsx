@@ -11,9 +11,9 @@ import ITB from '../assets/itb.png';
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Your Name" },
+      { title: "About — Al Varrel Putra Kusuma" },
       { name: "description", content: "Biography, education, and academic background." },
-      { property: "og:title", content: "About — Your Name" },
+      { property: "og:title", content: "About — Al Varrel Putra Kusuma" },
       { property: "og:description", content: "Biography, education, and academic background." },
     ],
   }),

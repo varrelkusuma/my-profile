@@ -11,9 +11,9 @@ import SMAN2 from '../assets/sman2.jpg';
 export const Route = createFileRoute("/honors")({
   head: () => ({
     meta: [
-      { title: "Honors and Awards — Your Name" },
+      { title: "Honors and Awards — Al Varrel Putra Kusuma" },
       { name: "description", content: "Awards, honors, and recognitions." },
-      { property: "og:title", content: "Honors and Awards — Your Name" },
+      { property: "og:title", content: "Honors and Awards — Al Varrel Putra Kusuma" },
       { property: "og:description", content: "Awards, honors, and recognitions." },
     ],
   }),

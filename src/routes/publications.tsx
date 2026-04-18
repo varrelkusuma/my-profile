@@ -4,9 +4,9 @@ import { SiteLayout } from "@/components/SiteLayout";
 export const Route = createFileRoute("/publications")({
   head: () => ({
     meta: [
-      { title: "Publications — Your Name" },
+      { title: "Publications — Al Varrel Putra Kusuma" },
       { name: "description", content: "Selected publications, papers, and preprints." },
-      { property: "og:title", content: "Publications — Your Name" },
+      { property: "og:title", content: "Publications — Al Varrel Putra Kusuma" },
       { property: "og:description", content: "Selected publications, papers, and preprints." },
     ],
   }),
