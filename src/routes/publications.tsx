@@ -26,36 +26,30 @@ type Pub = {
 };
 
 const pubs: Record<string, Pub[]> = {
-  "2025": [
+  "2027": [
     {
-      title: "[Paper Title Goes Here] — replace with your work",
-      authors: "Author One, Author Two, Your Name",
+      title: "(Placeholder) Working paper in Speech AI",
+      authors: "Author One, Author Two, Author Three",
       venue: "Conference / Journal Name",
-      year: "2025",
+      year: "2027",
       links: [
-        { label: "PDF", href: "#" },
+        { label: "Publication", href: "#" },
         { label: "Code", href: "#" },
-        { label: "BibTeX", href: "#" },
-      ],
-    },
-    {
-      title: "[Another Paper Title]",
-      authors: "Your Name, Coauthor A, Coauthor B",
-      venue: "Conference Name",
-      year: "2025",
-      links: [
-        { label: "PDF", href: "#" },
-        { label: "Project", href: "#" },
+        { label: "arXiv", href: "#" },
       ],
     },
   ],
-  "2024": [
+  "2026": [
     {
-      title: "[2024 Paper Title]",
-      authors: "Your Name, Collaborator",
+      title: "(Placeholder) Working paper in Computer Vision",
+      authors: "Author One, Author Two, Author Three",
       venue: "Journal / Conference",
-      year: "2024",
-      links: [{ label: "PDF", href: "#" }],
+      year: "2026",
+      links: [
+        { label: "Publication", href: "#" },
+        { label: "Code", href: "#" },
+        { label: "arXiv", href: "#" },
+      ],
     },
   ],
 };

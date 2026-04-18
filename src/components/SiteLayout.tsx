@@ -71,7 +71,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       </div>
 
       <footer className="max-w-6xl mx-auto px-6 py-10 mt-10 border-t border-border text-xs text-muted-foreground text-center">
-        © {new Date().getFullYear()} Your Name. Template inspired by academic personal pages.
+        © {new Date().getFullYear()}. Al Varrel Putra Kusuma. Template inspired by academic personal pages.
       </footer>
     </div>
   );
