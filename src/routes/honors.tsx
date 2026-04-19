@@ -24,16 +24,21 @@ export const Route = createFileRoute("/honors")({
   ),
 });
 
-type Category = "honors" | "awards" | "competitions";
+type Category = "grant & scholarship" | "honors & awards" | "competitions" | "grant";
 type Honor = { year: string; text: ReactNode; icon: LucideIcon | string; category: Category };
 
 const honors: Honor[] = [
-  { year: "2025", text: (<>Endowment Fund for Education Scholarship (LPDP) Awardee. <span className="italic text-muted-foreground">[Indonesia Ministry of Finance]</span></>), icon: Imperial, category: "honors" },
+  { year: "2025", text: (<>Endowment Fund for Education Scholarship (LPDP) | Awardee. <span className="italic text-muted-foreground">[Indonesia Ministry of Finance]</span></>), icon: Imperial, category: "grant & scholarship" },
+  { year: "2022", text: (<>Startup AWS Activate Credits | $20,000 | CEO/Co-Founder. <span className="italic text-muted-foreground">[AWS]</span></>), icon: AllureAI, category: "grant & scholarship" },
+  { year: "2022", text: (<>Selected Startup for G-20 Digital Innovation Network. <span className="italic text-muted-foreground">[Representing Indonesia]</span></>), icon: AllureAI, category: "honors & awards" },
+  { year: "2022", text: (<>Selected Startup for B-20 Business Summit. <span className="italic text-muted-foreground">[Representing Allure AI]</span></>), icon: AllureAI, category: "honors & awards" },
+  { year: "2021", text: (<>Starup Pre-Seed Funding (Indigo Incubator) | $50,000 | CEO/Co-Founder. <span className="italic text-muted-foreground">[PT. Telkom Indonesia]</span></>), icon: AllureAI, category: "grant & scholarship" },
+  { year: "2021", text: (<>Startup Grant (LPIK-ITB) | Rp20M | CEO/Co-Founder. <span className="italic text-muted-foreground">[Institut Teknologi Bandung]</span></>), icon: AllureAI, category: "grant & scholarship" },
   { year: "2021", text: (<>1st Winner of Kolabpreneur Startup Competition. <span className="italic text-muted-foreground">[WU Hub/Huawei Cloud]</span></>), icon: AllureAI, category: "competitions" },
   { year: "2021", text: (<>Best Pitch of Bandung Startup Pitching Day. <span className="italic text-muted-foreground">[The Greater Hub ITB]</span></>), icon: AllureAI, category: "competitions" },
   { year: "2020", text: (<>2nd Winner of Intel-Synnex Openvino Hackathon. <span className="italic text-muted-foreground">[Intel/Synnex Metro Data]</span></>), icon: AllureAI, category: "competitions" },
-  { year: "2020", text: (<>Valedictorian & Cum Laude Awardee. <span className="italic text-muted-foreground">[Institut Teknologi Bandung]</span></>), icon: ITB, category: "awards" },
-  { year: "2020", text: (<>3x Ganesha Karsa Awardee. <span className="italic text-muted-foreground">[Institut Teknologi Bandung]</span></>), icon: ITB, category: "awards" },
+  { year: "2020", text: (<>Valedictorian & Cum Laude Awardee. <span className="italic text-muted-foreground">[Institut Teknologi Bandung]</span></>), icon: ITB, category: "honors & awards" },
+  { year: "2020", text: (<>3x Ganesha Karsa Awardee. <span className="italic text-muted-foreground">[Institut Teknologi Bandung]</span></>), icon: ITB, category: "honors & awards" },
   { year: "2020", text: (<>3rd Winner of ITFest Business-IT Case Competition. <span className="italic text-muted-foreground">[Universitas Sumatera Utara]</span></>), icon: ITB, category: "competitions" },
   { year: "2019", text: (<>1st Winner of Information System Case Competition. <span className="italic text-muted-foreground">[Bina Nusantara University]</span></>), icon: ITB, category: "competitions" },
   { year: "2019", text: (<>1st Winner of Project Management Challenge. <span className="italic text-muted-foreground">[Project Management Institute]</span></>), icon: ITB, category: "competitions" },
@@ -48,13 +53,13 @@ const honors: Honor[] = [
 ];
 
 const filters: { key: Category; label: string; icon: LucideIcon }[] = [
-  { key: "honors", label: "Honors", icon: Sparkles },
-  { key: "awards", label: "Awards", icon: Medal },
+  { key: "grant & scholarship", label: "Grant & Scholarship", icon: Award },
+  { key: "honors & awards", label: "Honors & Awards", icon: Medal },
   { key: "competitions", label: "Competitions", icon: Trophy },
 ];
 
 function Honors() {
-  const [active, setActive] = useState<Category>("honors");
+  const [active, setActive] = useState<Category>("grant & scholarship");
   const filtered = honors.filter((h) => h.category === active);
 
   return (
