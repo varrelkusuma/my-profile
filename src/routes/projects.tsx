@@ -62,7 +62,7 @@ export const projects: Project[] = [
     icon: AudioLines,
     category: "Speech AI",
     venue: "INTERSPEECH 2025",
-    // thumbnail: "/path/to/image.jpg",
+    thumbnail: "https://placehold.co/640x360?text=AphaVoice",
     links: {
       github: "https://github.com/varrelkusuma/MedEmoji-TTS",
     },
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     icon: ScanHeart,
     category: "Vision AI",
     venue: "MICCAI 2025",
-    // thumbnail: "/path/to/image.jpg",
+    thumbnail: "https://placehold.co/640x360?text=Transparent+CXR",
     links: {
       github: "https://github.com/varrelkusuma/Reliable-CXR-AI-Pipeline",
     },
@@ -111,13 +111,15 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
       )}
       <div className="p-5 flex flex-col gap-2 flex-1">
-        {project.venue && (
-          <div className="text-xs uppercase tracking-wide text-muted-foreground font-medium">
-            {project.venue}
-          </div>
-        )}
-        <div>
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 text-primary px-2.5 py-1 text-xs font-medium">
+        <div className="flex items-center justify-between gap-2">
+          {project.venue ? (
+            <div className="text-xs uppercase tracking-wide text-muted-foreground font-medium">
+              {project.venue}
+            </div>
+          ) : (
+            <span />
+          )}
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 text-primary px-2.5 py-1 text-xs font-medium shrink-0">
             <Icon className="w-3 h-3" strokeWidth={2} />
             {project.category}
           </span>
