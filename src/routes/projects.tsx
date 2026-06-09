@@ -61,8 +61,8 @@ export const projects: Project[] = [
       "Text-to-speech and automatic speech recognition (ASR) for aphasia patients",
     icon: AudioLines,
     category: "Speech AI",
-    venue: "INTERSPEECH 2025",
-    thumbnail: "https://placehold.co/640x360?text=AphaVoice",
+    venue: "(Under Review)",
+    thumbnail: "https://res.cloudinary.com/dwgwif5hc/image/upload/v1781012348/Figure8_izz5tg.jpg",
     links: {
       github: "https://github.com/varrelkusuma/MedEmoji-TTS",
     },
@@ -73,8 +73,8 @@ export const projects: Project[] = [
       "Generalizable and interpretable deep learning for chest X-ray analysis",
     icon: ScanHeart,
     category: "Vision AI",
-    venue: "MICCAI 2025",
-    thumbnail: "https://placehold.co/640x360?text=Transparent+CXR",
+    venue: "MIUA 2026",
+    thumbnail: "https://res.cloudinary.com/dwgwif5hc/image/upload/v1781012643/AphaVoice-TTS_inbjkx.jpg",
     links: {
       github: "https://github.com/varrelkusuma/Reliable-CXR-AI-Pipeline",
     },
