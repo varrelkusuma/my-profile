@@ -62,7 +62,7 @@ export const projects: Project[] = [
     icon: AudioLines,
     category: "Speech AI",
     venue: "INTERSPEECH 2025",
-    thumbnail: "https://placehold.co/640x360?text=Transparent+CXR",
+    thumbnail: "https://placehold.co/640x360?text=AphaVoice",
     links: {
       github: "https://github.com/varrelkusuma/MedEmoji-TTS",
     },
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     icon: ScanHeart,
     category: "Vision AI",
     venue: "MICCAI 2025",
-    thumbnail: "https://placehold.co/640x360?text=AphaVoice",
+    thumbnail: "https://placehold.co/640x360?text=Transparent+CXR",
     links: {
       github: "https://github.com/varrelkusuma/Reliable-CXR-AI-Pipeline",
     },
