@@ -41,9 +41,9 @@ const pubs: Record<string, Pub[]> = {
   ],
   "2026": [
     {
-      title: "(Placeholder) Working paper in Computer Vision",
-      authors: "Author One, Author Two, Author Three",
-      venue: "Journal / Conference",
+      title: "Robust Pipeline for Mitigating Shortcut Learning in Multi-Pathology Chest X-Ray Classification",
+      authors: "Al Varrel Putra Kusuma, Federico E. Boiardi, Antoine D. Lain, Joram M. Posma",
+      venue: "MIUA 2026",
       year: "2026",
       links: [
         { label: "Publication", href: "#" },
