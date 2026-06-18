@@ -29,9 +29,9 @@ type Pub = {
 const pubs: Record<string, Pub[]> = {
   "2027": [
     {
-      title: "(Placeholder) Working paper in Speech AI",
-      authors: "Author One, Author Two, Author Three",
-      venue: "Conference / Journal Name",
+      title: "AphaVoice: Text-to-Speech Model for Aphasia Patient Simulation",
+      authors: <><strong>Al Varrel Putra Kusuma</strong>, Federico E. Boiardi, Antoine D. Lain, Joram M. Posma</>,
+      venue: "Under Review (OpenReview)",
       year: "2027",
       links: [
         { label: "Publication", href: "#" },
