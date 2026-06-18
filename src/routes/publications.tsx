@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
+import { ReactNode } from "react";
 
 export const Route = createFileRoute("/publications")({
   head: () => ({
@@ -19,7 +20,7 @@ export const Route = createFileRoute("/publications")({
 
 type Pub = {
   title: string;
-  authors: string;
+  authors: string | ReactNode;
   venue: string;
   year: string;
   links?: { label: string; href: string }[];
@@ -42,7 +43,7 @@ const pubs: Record<string, Pub[]> = {
   "2026": [
     {
       title: "Robust Pipeline for Mitigating Shortcut Learning in Multi-Pathology Chest X-Ray Classification",
-      authors: "Al Varrel Putra Kusuma, Federico E. Boiardi, Antoine D. Lain, Joram M. Posma",
+      authors: <><strong>Al Varrel Putra Kusuma</strong>, Federico E. Boiardi, Antoine D. Lain, Joram M. Posma</>,
       venue: "MIUA 2026",
       year: "2026",
       links: [
