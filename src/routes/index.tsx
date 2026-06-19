@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
 const updates = [
   {
     date: "Jun 2026",
-    content: <>1 paper accepted to <strong>MIUA 2026</strong>. See you in Dublin! 🇮🇪</>,
+    content: <>1 paper accepted to <strong>MIUA 2026</strong>. See you in Dublin! 🌍</>,
   },
 ];
 
