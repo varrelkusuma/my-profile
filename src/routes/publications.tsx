@@ -27,29 +27,23 @@ type Pub = {
 };
 
 const pubs: Record<string, Pub[]> = {
-  "2027": [
-    {
+  "2026": [
+        {
       title: "AphaVoice: Text-to-Speech Model for Aphasia Patient Simulation",
-      authors: <><strong>Al Varrel Putra Kusuma</strong>, Federico E. Boiardi, Antoine D. Lain, Joram M. Posma</>,
+      authors: <><strong>Al Varrel Putra Kusuma</strong>, Fernando Bello, Joshua Brown</>,
       venue: "Under Review (OpenReview)",
       year: "2027",
       links: [
-        { label: "Publication", href: "#" },
-        { label: "Code", href: "#" },
-        { label: "arXiv", href: "#" },
+        { label: "Code", href: "https://github.com/varrelkusuma/AphaVoice" },
       ],
     },
-  ],
-  "2026": [
     {
       title: "Robust Pipeline for Mitigating Shortcut Learning in Multi-Pathology Chest X-Ray Classification",
       authors: <><strong>Al Varrel Putra Kusuma</strong>, Federico E. Boiardi, Antoine D. Lain, Joram M. Posma</>,
       venue: "MIUA 2026",
       year: "2026",
       links: [
-        { label: "Publication", href: "#" },
-        { label: "Code", href: "#" },
-        { label: "arXiv", href: "#" },
+        { label: "Code", href: "https://github.com/varrelkusuma/Reliable-CXR-AI-Pipeline" },
       ],
     },
   ],

@@ -62,9 +62,9 @@ export const projects: Project[] = [
     icon: AudioLines,
     category: "Speech AI",
     venue: "(Under Review)",
-    thumbnail: "https://res.cloudinary.com/dwgwif5hc/image/upload/v1781012348/Figure8_izz5tg.jpg",
+    thumbnail: "https://res.cloudinary.com/dwgwif5hc/image/upload/v1781012643/AphaVoice-TTS_inbjkx.jpg",
     links: {
-      github: "https://github.com/varrelkusuma/MedEmoji-TTS",
+      github: "https://github.com/varrelkusuma/AphaVoice",
     },
   },
   {
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     icon: ScanHeart,
     category: "Vision AI",
     venue: "MIUA 2026",
-    thumbnail: "https://res.cloudinary.com/dwgwif5hc/image/upload/v1781012643/AphaVoice-TTS_inbjkx.jpg",
+    thumbnail: "https://res.cloudinary.com/dwgwif5hc/image/upload/v1781012348/Figure8_izz5tg.jpg",
     links: {
       github: "https://github.com/varrelkusuma/Reliable-CXR-AI-Pipeline",
     },
@@ -101,11 +101,11 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="group rounded-lg border border-border bg-card overflow-hidden flex flex-col transition-shadow hover:shadow-md">
       {project.thumbnail && (
-        <div className="aspect-[16/9] overflow-hidden bg-muted">
+        <div className="aspect-[16/9] overflow-hidden bg-white">
           <img
             src={project.thumbnail}
             alt={project.title}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+            className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
             loading="lazy"
           />
         </div>
