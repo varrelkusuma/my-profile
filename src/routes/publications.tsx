@@ -54,7 +54,7 @@ const pubs: Record<string, Pub[]> = {
 
 function Publications() {
   return (
-    <article className="space-y-12"> {/* Increased overall section spacing */}
+    <article className="space-y-12">
       <header>
         <h2 className="text-2xl font-serif font-semibold mb-3 pb-2 border-b border-border">Publications</h2>
         <p className="text-sm text-muted-foreground">
@@ -64,10 +64,20 @@ function Publications() {
 
       {Object.entries(pubs).map(([year, list]) => (
         <section key={year}>
-          <h3 className="text-lg font-serif font-semibold mb-6 text-foreground/80">{year}</h3>
-          <ul className="space-y-10"> 
+          <h3 className="text-lg font-serif font-semibold mb-5 text-foreground/80">{year}</h3>
+          
+          <ul className="space-y-4"> 
             {list.map((p, i) => (
-              <li key={i} className="flex flex-col gap-2.5">
+              <li 
+                key={i} 
+                className="flex flex-col gap-1.5 p-5 border border-border bg-card rounded-lg transition-shadow hover:shadow-sm"
+              >
+                <div className="mb-1">
+                  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] uppercase tracking-wider font-semibold bg-primary/10 text-primary">
+                    {p.venue}
+                  </span>
+                </div>
+                
                 <div className="text-base font-semibold leading-snug text-foreground">
                   {p.title}
                 </div>
@@ -76,10 +86,22 @@ function Publications() {
                   {p.authors}
                 </div>
 
-                <div className="flex flex-wrap items-center gap-2 mt-0.5">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary/10 text-primary">
-                    {p.venue}
-                  </span>
+                <div className="mt-2.5 flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-border/40">
+                  {p.links ? (
+                    <div className="text-sm flex flex-wrap gap-x-4 gap-y-2">
+                      {p.links.map((l, j) => (
+                        <a 
+                          key={j} 
+                          href={l.href}
+                          className="text-primary/80 hover:text-primary hover:underline underline-offset-4 transition-colors font-medium"
+                        >
+                          [{l.label}]
+                        </a>
+                      ))}
+                    </div>
+                  ) : (
+                    <span /> 
+                  )}
                   
                   {p.focus && (
                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-muted text-muted-foreground border border-border/50">
@@ -87,20 +109,6 @@ function Publications() {
                     </span>
                   )}
                 </div>
-
-                {p.links && (
-                  <div className="text-sm mt-1.5 flex flex-wrap gap-x-4 gap-y-2">
-                    {p.links.map((l, j) => (
-                      <a 
-                        key={j} 
-                        href={l.href}
-                        className="text-primary/80 hover:text-primary hover:underline underline-offset-4 transition-colors font-medium"
-                      >
-                        [{l.label}]
-                      </a>
-                    ))}
-                  </div>
-                )}
               </li>
             ))}
           </ul>

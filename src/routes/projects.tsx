@@ -58,7 +58,7 @@ export const projects: Project[] = [
   {
     title: "AphaVoice",
     description:
-      "Text-to-speech and automatic speech recognition (ASR) for aphasia patients",
+      "Text-to-speech model for aphasia patient simulation",
     icon: AudioLines,
     category: "Speech AI",
     venue: "(Under Review)",
