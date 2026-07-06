@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/SiteLayout";
 import {
   Github,
   AudioLines,
+  Cloud,
   ScanHeart,
   FileText,
   BookOpen,
@@ -17,7 +18,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
+  
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
@@ -37,6 +38,7 @@ export const Route = createFileRoute("/projects")({
 export type ProjectLinks = {
   paper?: string;
   github?: string;
+  huggingface?: string;
   arxiv?: string;
   bibtex?: string;
   abstract?: string;
@@ -65,6 +67,7 @@ export const projects: Project[] = [
     thumbnail: "https://res.cloudinary.com/dwgwif5hc/image/upload/v1781012643/AphaVoice-TTS_inbjkx.jpg",
     links: {
       github: "https://github.com/varrelkusuma/AphaVoice",
+      huggingface: "https://huggingface.co/varrelkusuma/AphaVoice",
     },
   },
   {
@@ -87,6 +90,7 @@ const LINK_META: Record<
 > = {
   paper: { label: "Paper", icon: FileText },
   github: { label: "GitHub", icon: Github },
+  huggingface: { label: "Hugging Face", icon: Cloud },
   arxiv: { label: "arXiv", icon: BookOpen },
   bibtex: { label: "BibTeX", icon: Quote },
   abstract: { label: "Abstract", icon: AlignLeft },

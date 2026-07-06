@@ -34,19 +34,21 @@ const pubs: Record<string, Pub[]> = {
       authors: <><strong>Al Varrel Putra Kusuma</strong>, Fernando Bello, Joshua Brown</>,
       venue: "Under Review (OpenReview)",
       focus: "Speech AI",
-      year: "2027",
+      year: "2026",
       links: [
         { label: "Code", href: "https://github.com/varrelkusuma/AphaVoice" },
+        { label: "Model", href: "https://huggingface.co/varrelkusuma/AphaVoice" },
       ],
     },
     {
       title: "Robust Pipeline for Mitigating Shortcut Learning in Multi-Pathology Chest X-Ray Classification",
       authors: <><strong>Al Varrel Putra Kusuma</strong>, Federico E. Boiardi, Antoine D. Lain, Joram M. Posma</>,
-      venue: "MIUA 2026",
+      venue: "MIUA 2026 (Oral)",
       focus: "Medical Imaging",
       year: "2026",
       links: [
         { label: "Code", href: "https://github.com/varrelkusuma/Reliable-CXR-AI-Pipeline" },
+        { label: "Paper", href: "https://drive.google.com/file/d/16kl_XJAsZegIe8m4Kc1DOjIgZMA-gV-i/view?usp=sharing" },
       ],
     },
   ],

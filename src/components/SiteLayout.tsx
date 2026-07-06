@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, Mail, Twitter, Linkedin, GraduationCap } from "lucide-react";
+import { MapPin, Mail, Twitter, Linkedin, FileUser } from "lucide-react";
 import type { ReactNode } from "react";
 import profilePic from '../assets/profile.jpg';
 
@@ -8,7 +8,7 @@ const navItems = [
   { to: "/about", label: "About Me" },
   { to: "/projects", label: "Projects" },
   { to: "/publications", label: "Publications" },
-  { to: "/honors", label: "Honors and Awards" },
+  { to: "/honors", label: "Honors" },
 ] as const;
 
 export function SiteLayout({ children }: { children: ReactNode }) {
@@ -60,8 +60,8 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                 <a href="https://linkedin.com/in/varrelkusuma/" target="_blank" rel="noreferrer">LinkedIn</a>
               </li>
               <li className="flex items-center gap-2">
-                <GraduationCap className="w-4 h-4 shrink-0 text-muted-foreground" />
-                <a href="https://scholar.google.com" target="_blank" rel="noreferrer">Google Scholar</a>
+                <FileUser className="w-4 h-4 shrink-0 text-muted-foreground" />
+                <a href="https://drive.google.com/file/d/1Mu1zRhN8ewCUi2-WhFlNFHYhQv6qfH-p/view?usp=sharing" target="_blank" rel="noreferrer">CV</a>
               </li>
             </ul>
           </div>

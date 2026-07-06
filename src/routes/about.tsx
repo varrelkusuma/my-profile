@@ -27,6 +27,9 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <article className="space-y-10">
+      <p className="text-sm text-muted-foreground">
+          For detailed information, please refer to this <a href="https://drive.google.com/file/d/1Mu1zRhN8ewCUi2-WhFlNFHYhQv6qfH-p/view?usp=sharing" className="underline hover:text-foreground transition-colors">CV</a> or kindly reach out to me via email.
+      </p>
       <section>
         <h2 className="text-2xl font-serif font-semibold mb-4 pb-2 border-b border-border">Education</h2>
         <ul className="space-y-4">
