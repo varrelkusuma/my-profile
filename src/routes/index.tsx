@@ -9,8 +9,22 @@ export const Route = createFileRoute("/")({
 
 const updates = [
   {
+    date: "Oct 2026",
+    content: <>Back to Indonesia & MIFX as <strong>Lead Product Growth</strong>. 👨🏻‍💻</>,
+  },
+  {
+    date: "Sept 2026",
+    content: (
+      <ul className="list-disc list-outside ml-4 space-y-2 marker:text-muted-foreground">
+        <li>Awarded Faculty of Medicine <strong>Dean's Prize</strong> for highest academic achievement in the cohort. 🏆</li>
+        <li>Graduated with Distinction (77.16%) from <strong>Imperial College London</strong> in Biomedical Research. 🎓</li>
+        <li>1 paper accepted to <strong>IEEE SLT 2026</strong>. See you in Palermo! 🍕</li>
+      </ul>
+    ),
+  },
+  {
     date: "Jun 2026",
-    content: <>1 paper accepted to <strong>MIUA 2026 (Oral)</strong>. See you in Dublin! 🌍</>,
+    content: <>1 paper accepted to <strong>MIUA 2026 (Oral)</strong>. See you in Dublin! 🍀</>,
   },
 ];
 

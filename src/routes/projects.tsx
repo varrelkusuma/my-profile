@@ -63,7 +63,7 @@ export const projects: Project[] = [
       "Text-to-speech model for aphasia patient simulation",
     icon: AudioLines,
     category: "Speech AI",
-    venue: "(Under Review)",
+    venue: "IEEE SLT 2026",
     thumbnail: "https://res.cloudinary.com/dwgwif5hc/image/upload/v1781012643/AphaVoice-TTS_inbjkx.jpg",
     links: {
       github: "https://github.com/varrelkusuma/AphaVoice",

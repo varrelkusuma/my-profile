@@ -44,7 +44,7 @@ function About() {
                 <div className="font-semibold text-pretty">Master of Research (MRes) · Biomedical Research (Data Science)</div>
                 <div className="text-sm text-muted-foreground whitespace-nowrap shrink-0 mt-0.5">2025-2026</div>
               </div>
-              <div className="text-sm text-muted-foreground mt-0.5">Imperial College London</div>
+              <div className="text-sm text-muted-foreground mt-0.5">Imperial College London · Distinction (77.16%) · Dean's Prize</div>
             </div>
           </li>
           
@@ -68,6 +68,21 @@ function About() {
       <section>
         <h2 className="text-2xl font-serif font-semibold mb-4 pb-2 border-b border-border">Experience</h2>
         <ul className="space-y-4">
+
+          <li className="flex items-start gap-3">
+            <img 
+              src={MIFX} 
+              alt="MIFX logo" 
+              className="w-5 h-5 shrink-0 mt-1 object-contain rounded-sm" 
+            />
+            <div className="flex-1">
+              <div className="flex justify-between items-start gap-4">
+                <div className="font-semibold text-pretty">Lead Product Growth</div>
+                <div className="text-sm text-muted-foreground whitespace-nowrap shrink-0 mt-0.5">2026-Now</div>
+              </div>
+              <div className="text-sm text-muted-foreground mt-0.5">Monex Investindo Futures (MIFX)</div>
+            </div>
+          </li>
 
           <li className="flex items-start gap-3">
             <img 

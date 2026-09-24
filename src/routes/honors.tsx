@@ -28,6 +28,7 @@ type Category = "grant & scholarship" | "honors & awards" | "competitions" | "gr
 type Honor = { year: string; text: ReactNode; icon: LucideIcon | string; category: Category };
 
 const honors: Honor[] = [
+  { year: "2025", text: (<>Dean's Prize for Biomedical Research (Data Science). <span className="italic text-muted-foreground">[Imperial College London]</span></>), icon: Imperial, category: "honors & awards" },
   { year: "2025", text: (<>Endowment Fund for Education Scholarship (LPDP) | Awardee. <span className="italic text-muted-foreground">[Indonesia Ministry of Finance]</span></>), icon: Imperial, category: "grant & scholarship" },
   { year: "2022", text: (<>Startup AWS Activate Credits | $20,000 | CEO/Co-Founder. <span className="italic text-muted-foreground">[AWS]</span></>), icon: AllureAI, category: "grant & scholarship" },
   { year: "2022", text: (<>Selected Startup for G-20 Digital Innovation Network. <span className="italic text-muted-foreground">[Representing Indonesia]</span></>), icon: AllureAI, category: "honors & awards" },
